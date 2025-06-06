@@ -1,7 +1,7 @@
-const title = sessionStorage.getItem('title') || '대문';
+const title = sessionStorage.getItem('title') ||'앞마당';
 sessionStorage.removeItem('title');
 history.replaceState(null, '', `/wiki/${title}`);
-document.title = `${title} - 이저그`;
+document.title = `${title} - 알우리말`;
 
 let content = '';
 let documents = [];
@@ -131,10 +131,10 @@ async function setContent(){
         }
         
         replacing = replacing.replace(func, (m, p1) => {return eval(p1);});
-        console.log(`틀(파싱 전): ${replacing}`);
+        console.log(`틀(풀이 앞): ${replacing}`);
         
         replacing = md.render(replacing);
-        console.log(`틀(파싱 후): ${replacing}`);
+        console.log(`틀(풀이 뒤): ${replacing}`);
         
         content = content.replace(temp, replacing);
     }
