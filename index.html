@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1, user-scalable=no">
-	<title>이저그</title>
+	<title>알우리말</title>
 	<link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
 </head>
@@ -16,7 +16,7 @@
                 <div id="wordmark"></div>
             </a>
         </div>
-        <input id="input" spellcheck="false" placeholder="검색어를 입력..." onclick="search(this.value)" oninput="search(this.value)" onchange="setTimeout(() => {resultBox.innerHTML = '';}, 1)">
+        <input id="input" spellcheck="false" placeholder="찾을 것을 적으시오..." onclick="search(this.value)" oninput="search(this.value)" onchange="setTimeout(() => {resultBox.innerHTML = '';}, 1)">
         <div id="result"></div>
     </div>
 	<div id="content" onclick="resultBox.innerHTML = '';"></div>
