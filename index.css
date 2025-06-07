@@ -164,21 +164,23 @@ table{
 }
 
 #top a{
+  display: flex;
+  gap: 10px;
   color: var(--bg);
 }
 
 #logo{
   display: inline-block;
   width: 30px;
-  height: 20px;
+  height: 30px;
   mask: url('imgs/알우리말_로고.svg') no-repeat center / contain;
   background-color: var(--text);
 }
 
 #wordmark{
   display: inline-block;
-  width: 60px;
-  height: 20px;
+  width: 80px;
+  height: 30px;
   mask: url('imgs/알우리말_워드마크.svg') no-repeat center / contain;
   background-color: var(--text);
 }
