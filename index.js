@@ -110,7 +110,7 @@ MathJax.Hub.Config({
 });
 
 async function setContent(){
-    const response1 = await fetch(`https://raw.githubusercontent.com/idzogy/wiki/main/docs/${title}.md`);
+    const response1 = await fetch(`https://raw.githubusercontent.com/arurimal/wiki/main/docs/${title}.md`);
     content = await response1.text();
     
     // templates
@@ -123,7 +123,7 @@ async function setContent(){
             match = match.replace(/\|([^|=]+)=([^|=]+)/, (m, variable, value) => {tempVars[variable] = value;return '';});
         }
         
-        const response2 = await fetch(`https://raw.githubusercontent.com/idzogy/wiki/main/templates/${match}.md`);
+        const response2 = await fetch(`https://raw.githubusercontent.com/arurimal/wiki/main/templates/${match}.md`);
         let replacing = await response2.text();
         
         while(tempVar.test(replacing)){
@@ -155,7 +155,7 @@ async function setContent(){
 }
 
 async function setDocuments(){
-    const response = await fetch(`https://raw.githubusercontent.com/idzogy/wiki/main/assets/tree.json`);
+    const response = await fetch(`https://raw.githubusercontent.com/arurimal/wiki/main/assets/tree.json`);
     documents = await response.json();
     documents = documents[0]['contents'].map(doc => doc['name'].slice(0,-3));
 }
